@@ -1,4 +1,4 @@
-# Histogram-of-an-images
+![image](https://github.com/user-attachments/assets/77212c97-47f1-498b-adbc-7622aab69dbf)# Histogram-of-an-images
 ## Aim
 To obtain a histogram for finding the frequency of pixels in an Image with pixel values ranging from 0 to 255. Also write the code using OpenCV to perform histogram equalization.
 
@@ -78,20 +78,21 @@ plt.show()
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
-![image](https://github.com/user-attachments/assets/2034ab70-6295-4725-86a1-d3d40ddbea18)
-![image](https://github.com/user-attachments/assets/2382870d-a1b9-47ca-86ea-a3ca2af1ce0a)
+![image](https://github.com/user-attachments/assets/8eade1a3-1b33-47b0-8cc5-3dbc9144885d)
+
+![image](https://github.com/user-attachments/assets/2c72fc67-97ec-42a8-8632-412be1778880)
 
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
-![image](https://github.com/user-attachments/assets/f7577e76-c8d2-4dea-a218-5d6ec7574a37)
 
+![image](https://github.com/user-attachments/assets/eb805a64-e07c-465d-951c-2ecc57b2e57a)
+
+![image](https://github.com/user-attachments/assets/2d34bc57-b5a9-4cd9-ab03-f48f7542b351)
 
 
 ### Histogram Equalization of Grayscale Image.
-
-![image](https://github.com/user-attachments/assets/06a78a62-aece-4391-8fcf-21933fab5d37)
-
+![image](https://github.com/user-attachments/assets/7d8edb62-71e6-47bc-957a-09bc6efe17fc)
 
 
 
