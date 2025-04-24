@@ -84,10 +84,13 @@ plt.show()
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
+![image](https://github.com/user-attachments/assets/75106bbf-e80f-4c71-9f34-21401c0a33b2)
 
+![image](https://github.com/user-attachments/assets/42ca3df6-a0ae-448b-9715-2b2e9d67e805)
 
 
 ### Histogram Equalization of Grayscale Image.
+![image](https://github.com/user-attachments/assets/be8022bb-0528-489d-a025-6d560e109186)
 
 
 
