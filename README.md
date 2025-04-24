@@ -26,60 +26,72 @@ The Histogram of gray scale image and color image is shown.
 
 ## Program:
 ```python
-# Developed By:BHAVATHARANI S 
+# Developed By: Bhavatharani S
 # Register Number: 212223230032
+import matplotlib.pyplot as plt 
 import cv2
-import numpy as np
-import matplotlib.pyplot as plt
-image=cv2.imread('/content/abdul kalam.jpeg',cv2.IMREAD_GRAYSCALE)
-plt.title("gray image")
-plt.imshow(image,cmap='gray')
+
+grayscale_image = cv2.imread("snoopy.jpg", cv2.IMREAD_GRAYSCALE)
+color_img = cv2.imread("snoopy.jpg")
+
+gray_hist = cv2.calcHist([grayscale_image], [0], None, [256], [0, 256])
+hist_b = cv2.calcHist([color_img], [0], None, [256], [0, 256])
+hist_g = cv2.calcHist([color_img], [1], None, [256], [0, 256])
+hist_r = cv2.calcHist([color_img], [2], None, [256], [0, 256])
+
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+plt.imshow(grayscale_image, cmap='gray')
+plt.title('Grayscale Image')
 plt.axis('off')
-plt.title("Histogram of Grayscale Image")
-plt.hist(image.ravel(), bins=256, color='black', alpha=0.6)
-plt.xlim(0, 255)
-plt.tight_layout()
+
+plt.subplot(1, 2, 2)
+plt.imshow(cv2.cvtColor(colourscale_image, cv2.COLOR_BGR2RGB))
+plt.title('Color Image')
+plt.axis('off')
+
 plt.show()
-equalized_gray_image = cv2.equalizeHist(image)
-plt.title("Histogram of Equalized Grayscale Image")
-plt.hist(equalized_gray_image.ravel(), bins=256, color='black', alpha=0.6)
-plt.xlim(0, 255)
-plt.title("Enhanced Grayscale Image")
-plt.imshow(equalized_gray_image, cmap='gray')
-plt.axis('off')
-color_image = cv2.imread('/content/images (3).jpeg')
-plt.title("Input Color Image")
-plt.imshow(cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB))
-plt.axis('off')
-hist_b = cv2.calcHist([color_image], [0], None, [256], [0, 256])
-hist_g = cv2.calcHist([color_image], [1], None, [256], [0, 256])
-hist_r = cv2.calcHist([color_image], [2], None, [256], [0, 256])
-plt.title("Histogram of Input Color Image")
-plt.plot(hist_b, color='blue', label='Blue channel')
-plt.plot(hist_g, color='green', label='Green channel')
-plt.plot(hist_r, color='red', label='Red channel')
+
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+plt.plot(gray_hist, color='black')
+plt.title("Grayscale Image Histogram (Normalized)")
+plt.xlabel("Pixel Intensity")
+plt.ylabel("Normalized Pixel Count")
+
+plt.subplot(1, 2, 2)
+plt.plot(hist_r, color='red')
+plt.plot(hist_b, color='blue')
+plt.plot(hist_g, color='green')
+plt.title("Color Image Histogram (Normalized)")
+plt.xlabel("Pixel Intensity")
+plt.ylabel("Normalized Pixel Count")
+
 plt.show()
-plt.title("Histogram Equalized Image")
-plt.imshow(equalized_color_image[:,:,::-1])
-plt.axis('off')
-blue_channel_eq = cv2.equalizeHist(color_image[:, :, 0])
-green_channel_eq = cv2.equalizeHist(color_image[:, :, 1])
-red_channel_eq = cv2.equalizeHist(color_image[:, :, 2])
-equalized_color_image = cv2.merge([blue_channel_eq, green_channel_eq, red_channel_eq])
+
+equalized_grey_img = cv2.equalizeHist(grayscale_image)
+plt.title("Equalized Hist of Gray Image")
+plt.hist(equalized_grey_img.ravel(),bins=256,color='black',alpha=0.6)
+plt.show()
 ```
 ## Output:
 ### Input Grayscale Image and Color Image
-![image](https://github.com/user-attachments/assets/49948ac1-50ca-4d7f-9928-6429739fcbb0)
+![image](https://github.com/user-attachments/assets/2034ab70-6295-4725-86a1-d3d40ddbea18)
+![image](https://github.com/user-attachments/assets/2382870d-a1b9-47ca-86ea-a3ca2af1ce0a)
+
 
 
 ### Histogram of Grayscale Image and any channel of Color Image
+![image](https://github.com/user-attachments/assets/f7577e76-c8d2-4dea-a218-5d6ec7574a37)
 
-![image](https://github.com/user-attachments/assets/6faea124-39ff-4413-ba63-7ed06840b2cb)
 
 
 ### Histogram Equalization of Grayscale Image.
 
-![image](https://github.com/user-attachments/assets/26857ff2-6e6a-4ce1-a724-db36b465828e)
+![image](https://github.com/user-attachments/assets/06a78a62-aece-4391-8fcf-21933fab5d37)
+
 
 
 
