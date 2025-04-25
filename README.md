@@ -30,8 +30,8 @@ The Histogram of gray scale image and color image is shown.
 import matplotlib.pyplot as plt 
 import cv2
 
-grayscale_image = cv2.imread("snoopy.jpg", cv2.IMREAD_GRAYSCALE)
-color_img = cv2.imread("snoopy.jpg")
+grayscale_image = cv2.imread("panda.jpeg", cv2.IMREAD_GRAYSCALE)
+color_img = cv2.imread("panda.jpeg")
 
 gray_hist = cv2.calcHist([grayscale_image], [0], None, [256], [0, 256])
 hist_b = cv2.calcHist([color_img], [0], None, [256], [0, 256])
