@@ -31,7 +31,7 @@ The Histogram of gray scale image and color image is shown.
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-gray_image = cv2.imread('1.jpg', cv2.IMREAD_GRAYSCALE)
+gray_image = cv2.imread('panda.jpeg', cv2.IMREAD_GRAYSCALE)
 plt.title("Grayscale Image")
 plt.imshow(gray_image, cmap='gray')
 plt.axis('off')
@@ -55,7 +55,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 # Step 1: Get the input color image
-color_image = cv2.imread('2.jpg')
+color_image = cv2.imread('bird.jpg')
 # Step 2: Display the input color image
 plt.title("Input Color Image")
 plt.imshow(cv2.cvtColor(color_image, cv2.COLOR_BGR2RGB))
@@ -93,7 +93,7 @@ equalized_color_image = cv2.merge([blue_channel_eq, green_channel_eq, red_channe
 
 ### Histogram Equalization of Grayscale Image.
 
-![image](https://github.com/user-attachments/assets/6c59f8e0-aff3-44f5-8498-1ba12c4bbd47)
+![image](https://github.com/user-attachments/assets/ba5d4bcc-1acd-45e5-8af2-f03c4d602d14)
 
 ![image](https://github.com/user-attachments/assets/b746f535-deb3-42f7-b2df-a7fc408c8c5c)
 
